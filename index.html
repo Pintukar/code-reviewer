@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python Code Reviewer</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <h1>🔍 Python Code Reviewer</h1>
+  <p class="sub">Code paste karo (1–10,000 lines). Security, error handling aur tests ke issues line-by-line milenge.</p>
+  <textarea id="code" spellcheck="false" placeholder="Yahan Python code paste karo..."></textarea>
+  <div class="bar"><button id="go">Analyze</button><span id="count"></span></div>
+  <p id="err" role="alert"></p>
+  <section id="result" hidden>
+    <div id="summary"></div>
+    <table><thead><tr><th>Line</th><th>Level</th><th>Type</th><th>Problem</th><th>Suggested fix</th></tr></thead><tbody id="rows"></tbody></table>
+    <h2>✅ Corrected code (auto-fixable lines)</h2><pre id="fixed"></pre>
+    <h2>🧪 Test skeleton</h2><pre id="tests"></pre>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
